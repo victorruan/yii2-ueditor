@@ -1,13 +1,13 @@
 {
-    "name": "crazyfd/yii2-ueditor",
+    "name": "victorruan/yii2-ueditor",
     "description": "yii2使用百度编辑器上传",
 	"keywords": ["yii", "ueditor", "upload"],
 	"type": "yii2-extension",
     "license": "MIT",
     "authors": [
         {
-            "name": "crazyfd",
-            "email": "crazyfd@qq.com"
+            "name": "victorruan",
+            "email": "250069802@qq.com"
         }
     ],
 	
@@ -15,6 +15,6 @@
         "yiisoft/yii2": "*"
     },
 	"autoload": {
-		"psr-4": { "crazyfd\\ueditor\\": "" }
+		"psr-4": { "victorruan\\ueditor\\": "" }
 	}
 }

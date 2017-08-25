@@ -1,6 +1,6 @@
 <?php
 
-namespace crazyfd\ueditor;
+namespace victorruan\ueditor;
 use Yii;
 use yii\web\View;
 use yii\helpers\Html;

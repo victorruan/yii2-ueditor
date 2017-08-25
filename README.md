@@ -1,6 +1,6 @@
 yii2-ueditor
 =================================
-* @author crazyfd <crazyfd@qq.com>
+* @author victorruan <250069802@qq.com>
 * @version 1.0
 * @desc  百度HTML编辑器
 html editer for Yii Framework 2
@@ -15,7 +15,7 @@ Get it via [composer](http://getcomposer.org/) by adding the package to your `co
 ```json
 {
   "require": {
-    "crazyfd/yii2-ueditor": "dev-master"
+    "victorruan/yii2-ueditor": "dev-master"
   }
 }
 ```
@@ -35,7 +35,7 @@ public function actions()
 	return [
 		
 		'ueditor' => [
-			'class' => 'crazyfd\ueditor\Upload',
+			'class' => 'victorruan\ueditor\Upload',
 			'config'=>[
 				'uploadDir'=>date('Y/m/d')
 			]

@@ -5,7 +5,7 @@
  * @license http://www.yiiframework.com/license/
  */
 
-namespace crazyfd\ueditor;
+namespace victorruan\ueditor;
 
 use Yii;
 use yii\base\Action;

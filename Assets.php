@@ -1,5 +1,5 @@
 <?php
-namespace crazyfd\ueditor;
+namespace victorruan\ueditor;
 
 use Yii;
 
