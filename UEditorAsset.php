@@ -8,7 +8,7 @@
  * UEditor版本v1.4.3.1
  * Yii版本2.0+
  */
-namespace crazydb\ueditor;
+namespace victorruan\ueditor;
 
 use yii;
 use yii\web\AssetBundle;
@@ -18,7 +18,7 @@ use yii\web\AssetBundle;
  * 负责UEditor的资源文件引入。
  * 由于bower上的源码是纯源码，需要用grunt打包后才能使用，因此扩展自带了1.4.3版本的UEditor核心文件。
  *
- * @package crazydb\ueditor
+ * @package victorruan\ueditor
  */
 class UEditorAsset extends AssetBundle {
 
@@ -35,6 +35,7 @@ class UEditorAsset extends AssetBundle {
      */
     public $js = [
         'ueditor.all.min.js',
+        'third-party/SyntaxHighlighter/shCore.js',
     ];
 
     /**
@@ -43,7 +44,9 @@ class UEditorAsset extends AssetBundle {
      *
      * @var array
      */
-    public $css = [];
+    public $css = [
+        'third-party/SyntaxHighlighter/shCoreDefault.css',
+    ];
 
 
     public $publishOptions = [

@@ -36,10 +36,10 @@ php composer.phar require --prefer-dist crazydb/yii2-ueditor "*"
 
 ### 后端支持
 
-1) 继承 `crazydb\ueditor\UEditorController` 来实现自己的后端。（推荐）
+1) 继承 `victorruan\ueditor\UEditorController` 来实现自己的后端。（推荐）
 
 ```php
-class EditorController extends crazydb\ueditor\UEditorController
+class EditorController extends victorruan\ueditor\UEditorController
 {
     public function init(){
         parent::init();
@@ -68,7 +68,7 @@ class EditorController extends crazydb\ueditor\UEditorController
 ```php
     'controllerMap' => [
         'ueditor' => [
-            'class' => 'crazydb\ueditor\UEditorController',
+            'class' => 'victorruan\ueditor\UEditorController',
         ]
     ],
 ```
@@ -78,7 +78,7 @@ class EditorController extends crazydb\ueditor\UEditorController
 ```
     'controllerMap' => [
         'ueditor' => [
-            'class' => 'crazydb\ueditor\UEditorController',
+            'class' => 'victorruan\ueditor\UEditorController',
             'thumbnail' => false,//如果将'thumbnail'设置为空，将不生成缩略图。
             'watermark' => [    //默认不生存水印
                 'path' => '', //水印图片路径
@@ -120,12 +120,12 @@ class EditorController extends crazydb\ueditor\UEditorController
 就像使用普通的扩展一样。
 
 ```
-<?= $form->field($model, 'content')->widget(\crazydb\ueditor\UEditor::className()) ?>
+<?= $form->field($model, 'content')->widget(\victorruan\ueditor\UEditor::className()) ?>
 ```
 或者
 
 ```
-<?= \crazydb\ueditor\UEditor::widget([
+<?= \victorruan\ueditor\UEditor::widget([
     'model' => $model,
     'attribute' => 'content',
 ]) ?>
@@ -134,7 +134,7 @@ class EditorController extends crazydb\ueditor\UEditorController
 还可以配置更多属性：
 
 ```
-<?= \crazydb\ueditor\UEditor::widget([
+<?= \victorruan\ueditor\UEditor::widget([
     'model' => $model,
     'attribute' => 'content',
     'config' => [
@@ -152,7 +152,7 @@ class EditorController extends crazydb\ueditor\UEditorController
 
 
 ```
-<?= \crazydb\ueditor\UEditor::widget([
+<?= \victorruan\ueditor\UEditor::widget([
     'name' => $name,
     'value' => $value,
 ]) ?>

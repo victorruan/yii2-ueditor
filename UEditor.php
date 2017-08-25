@@ -10,11 +10,11 @@
  * 使用方法:
  * 1、AR
  *
- * <?=$form->field($model, 'content')->widget(\crazydb\ueditor\UEditor::className())?>
+ * <?=$form->field($model, 'content')->widget(\victorruan\ueditor\UEditor::className())?>
  *
  * 或者
  *
- * <?=\crazydb\ueditor\UEditor::widget([
+ * <?=\victorruan\ueditor\UEditor::widget([
  *      'model' => $model,
  *      'attribute' => 'content',
  * ])?>
@@ -22,13 +22,13 @@
  *
  * 2、普通表单
  *
- * <?=\crazydb\ueditor\UEditor::widget([
+ * <?=\victorruan\ueditor\UEditor::widget([
  *      'name' => $name,
  *      'value' => $value,
  * ])>
  */
 
-namespace crazydb\ueditor;
+namespace victorruan\ueditor;
 
 use yii;
 use yii\helpers\Html;
@@ -39,7 +39,7 @@ use yii\helpers\ArrayHelper;
 /**
  * Class UEditor
  * UEditor Widget的主类，用于前端显示编辑器
- * @package crazydb\ueditor
+ * @package victorruan\ueditor
  */
 class UEditor extends yii\widgets\InputWidget
 {
@@ -146,6 +146,12 @@ class UEditor extends yii\widgets\InputWidget
     });
 UEDITOR;
 
+        $this->getView()->registerJs($script);
+
+        $script = <<<UEDITOR
+SyntaxHighlighter.defaults['gutter'] = 'false';
+SyntaxHighlighter.all();
+UEDITOR;
         $this->getView()->registerJs($script);
 
         if ($this->hasModel())
