@@ -148,12 +148,6 @@ UEDITOR;
 
         $this->getView()->registerJs($script);
 
-        $script = <<<UEDITOR
-SyntaxHighlighter.defaults['gutter'] = 'false';
-SyntaxHighlighter.all();
-UEDITOR;
-        $this->getView()->registerJs($script);
-
         if ($this->hasModel())
             return Html::activeTextarea($this->model, $this->attribute);
         else
