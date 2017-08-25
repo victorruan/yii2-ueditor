@@ -93,6 +93,11 @@ class Ueditor extends InputWidget
         }
         $script .= ';';
         $this->view->registerJs($script, View::POS_READY);
+        $script = <<<UEDITOR
+SyntaxHighlighter.defaults['gutter'] = 'false';
+SyntaxHighlighter.all();
+UEDITOR;
+        $this->view->registerJs($script);
     }
 
 }

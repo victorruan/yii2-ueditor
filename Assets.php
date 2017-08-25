@@ -12,8 +12,13 @@ class Assets extends \yii\web\AssetBundle
         return [
             'ueditor.config.js',
             YII_DEBUG ? 'ueditor.all.js' : 'ueditor.all.min.js',
+            'third-party/SyntaxHighlighter/shCore.js',
         ];
     }
+
+    public $css = [
+        'third-party/SyntaxHighlighter/shCoreDefault.css',
+    ];
 
     public function init()
     {
